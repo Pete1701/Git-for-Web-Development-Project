@@ -88,7 +88,7 @@
         -Inside the cloned repo directory, create a branch: git checkout -b 'firstname-lastname'
         -After we make changes, we add and commit (git add/git commit -m "message")
         -Push the changes to our version of the Github repo (git push -u origin branch-name)
-        -Submit a pull request: in our Github, we select our name-branch and click New pull request
+        -Submit a pull request: in our Github, we select our name-branch and click "New pull request"
         -In the pull request page we change to our forked repo
         -Add reviewers
         -Submit pull request
@@ -98,11 +98,20 @@ Stretch Questions
     1. What is the difference between an inline element and a block element?
         Block elements take the available full width and always start with a new line.
         Inline elements take only the required width and do not start with a new line.
+        We cannot nest inline elements inside block elements.
+        We can nest inline and block elements inside block elements.
     2. What happens when an element is positioned absolutely? 
-        It is placed in an exact location on the page, in a fixed specified offset from it's ancestor, or from the body element if it doesn't have one.
+        It is placed in an exact location on the page, in a fixed specified offset from it's first positioned ancestor, or from the body element if it doesn't have one.
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        Using the "display: inline-block" property and giving it the width we want.
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
-        Block: h1, p, hr
+        Block: h1, p, div
         Inline: a, img
         Inline-block: button
     5. In your own words, explain the box model. What is the fix for the box model? 
+        The box model is a way for controling the spacing, space allocation and styling of this space of our elements. This also affects the element's position in the page.
+        Our content is given a space (we set width and height) and it is surrounded by a border.
+        Between content and border there is some space called padding, and out of the border a margin is defined, which is the distance the border has from it's closest elements in the page.
+        Each of this areas is given a space (which can also be set to 0 for any of them) and so we can control spacing and position of our content. We can also style each of these areas.
+        One issue is that each space given to each of these areas, adds to the total space of our box, and this can be difficult to control.
+        To fix this, we can set the border area to be the actual border of the box, with the property "box-sizing: border-box;"
